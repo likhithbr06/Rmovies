@@ -1,0 +1,56 @@
+.rmdb-header {
+  width: 100%;
+  height: 100px;
+ // background: #9e4242;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 101;
+  transition: background-color 2000ms;
+}
+.rmdb-header-collapse{
+  background-color: #0000007d;
+}
+
+.rmdb-header-content {
+  max-width: 1280px;
+  //min-height: 120px;
+  height: auto;
+  padding: 20px 0px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.rmdb-logo {
+  width: 120px;
+  //margin-top: 9px;
+  float: left;
+}
+
+.rmdb-tmdb-logo {
+  width: 85px;
+  margin-top: 14px;
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .rmdb-header{
+    height: 60px;
+  }
+  .rmdb-header-content {
+    max-width: 1280px;
+    min-height: 0px;
+  }
+
+  .rmdb-tmdb-logo {
+    display: inline-block;
+    width:73px;
+    margin-top: 0px;
+  }
+
+  .rmdb-logo {
+    width: 90px;
+    margin-top: -10px;
+  }
+}

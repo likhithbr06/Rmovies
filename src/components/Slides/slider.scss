@@ -1,0 +1,102 @@
+$color1: #566473;
+
+.box{
+    font-family: 'Cormorant Unicase';
+    color:white;
+    font-size: 36px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    text-overflow: ellipsis;
+}
+.last-box{
+    font-family: 'Cormorant Unicase';
+    color: white;
+    font-size: 27px;
+    top: 120px;
+    padding: 20px 1px;
+    position: relative;
+    text-align: center;
+    width: 64%;
+    left: 50px;
+    &::after,&::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        border: 2px solid;
+        transition: all 0.6s ease;
+        border-radius: 2px;
+    }
+    &::after{
+        bottom: 0;
+        right: 0;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: white;
+        border-right-color: white;
+    }
+    &::before{
+        top: 0;
+        left: 0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-top-color: white;
+        border-left-color: white;
+    }
+    &:hover:after,&:hover:before{
+        width: 100%;
+      height: 100%;
+      text-decoration: none !important;
+      
+    }
+}
+.mCard{
+    display: inline-block;
+    margin: 0;
+    padding-right: 8px;
+    vertical-align: top;
+    white-space: normal;
+    width: calc(98.333% - 7.33326px) !important  ;
+}
+
+.mCarousel{
+    margin-top: 40px;
+    h2{
+        font-family: 'Cormorant Unicase';
+        margin-bottom: 20px;
+        color: #848282;
+    }
+}
+.slick-next:before, .slick-prev:before{
+    font-size: 40px;
+}
+.slick-prev {
+    left: -60px;
+}
+
+@media screen and (max-width:500px){
+    .slick-next:before, .slick-prev:before{
+        font-size: 30px;
+    }
+.slick-prev {
+    left: -17px;
+    z-index: 99;
+}
+.slick-next {
+    right: 4px;
+    background: transparent !important;
+}
+.slick-next, .slick-prev{
+    top: 30%;
+}
+.last-box{
+    font-size: 18px;
+    top: 54px;
+    padding: 6px 1px;
+    left: 15px;
+}
+}

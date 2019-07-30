@@ -1,0 +1,54 @@
+.rmdb-grid h1 {
+  font-family: 'Cormorant Unicase'; 
+   font-size:42px;
+   color: white;
+    margin-bottom: 10px;
+    margin-top: 12px;
+}
+
+.rmdb-grid-content {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.rmdb-grid-element {
+  margin: 0 40px 40px 0;
+  background: #101010;;
+  max-height: 430px;
+  animation: animateGrid 0.5s;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  
+}
+.rmdb-grid-element:hover{
+  box-shadow: 1px 14px 20px 0px rgba(0, 0, 0, 0.29);
+  transform: scale(1.1, 1.1);
+}
+
+@keyframes animateGrid {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+
+/* For a 4-column grid */
+.rmdb-grid-element:nth-child(4n+4) {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 720px) {
+  .rmdb-grid-content {
+    grid-template-columns: auto auto;
+  }
+
+  .rmdb-grid-element:nth-child(2n+2) {
+    margin-right: 0;
+  }
+
+  .rmdb-grid h1 {
+    font-size:33px;
+  }
+}

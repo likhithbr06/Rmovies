@@ -1,0 +1,47 @@
+.rmdb-actor {
+  box-sizing: border-box;
+}
+
+.rmdb-actor img {
+  width: 40%;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+}
+
+.rmdb-actor-name {
+  font-family: 'Cormorant Unicase';
+  font-size: 22px;
+  color:#fff;
+  float: left;
+  margin: 10px 20px;
+  width: 40%;
+  box-sizing: border-box;
+}
+
+.rmdb-actor-character {
+  font-family: 'Raleway';
+  font-size: 16px;
+  color:#fff;
+  float: left;
+  margin: 0 20px 10px 20px;
+  width: 40%;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 500px) {
+  .rmdb-actor img{
+    width: 100%;
+  }
+  .rmdb-grid-element{
+    margin: 0 18px 18px 0;
+  }
+  .rmdb-actor-name{
+    width: 100%;
+    margin: 10px 6px;
+  }
+  .rmdb-actor-character{
+    width: 100%;
+    margin: 0 0px 10px 10px;
+  }
+}

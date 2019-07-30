@@ -1,0 +1,14 @@
+.list-home{
+    margin-bottom: 150px;
+    .container{
+        top: 130px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .list-home .container {
+        top: 60px;
+    }
+}

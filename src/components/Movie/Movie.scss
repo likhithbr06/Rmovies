@@ -1,0 +1,18 @@
+.rmdb-movie {
+  margin-bottom: 100px;
+  position: relative;
+  //top: 120px;
+}
+
+.rmdb-movie-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 500px) {
+.rmdb-movie{
+  //top: 71px;
+  overflow: hidden;
+}
+}

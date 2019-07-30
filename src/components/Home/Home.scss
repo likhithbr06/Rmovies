@@ -1,0 +1,60 @@
+.rmdb-home {
+  margin-bottom: 100px;
+}
+#movieCarousel{
+  .carousel{
+   // overflow: hidden;
+  }
+   .carousel-item{
+  //   width: 100%;
+     //white-space: nowrap;
+  //   line-height: 0;
+     //overflow: hidden;
+  //   overflow-x: scroll;
+   }
+  .mov-card{
+    //display: inline-block;
+   // white-space: normal;
+  }
+}
+.rmdb-home-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mov-tab{
+  height: 80px;
+  position: relative;
+  text-align: center;
+  font-size: 26px;
+  border-bottom: none !important;
+}
+.nav-tabs{
+  background: #252020;
+  
+  .active{
+    background: white;
+  }
+  li{
+    cursor: pointer;
+    box-shadow: 0px 27px 64px -13px rgba(0,0,0,0.52);
+  }
+  li a{
+    text-decoration: none;
+    margin-top: 17px;
+    position: absolute;
+  }
+}
+.tab-content{
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 500px) {
+.rmdb-home{
+  overflow: hidden;
+}
+}
+
+
+

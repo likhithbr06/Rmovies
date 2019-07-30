@@ -1,0 +1,63 @@
+.rmdb-navigation {
+  // width: 100%;
+  // height: 50px;
+  // //background: #1b1b1b;
+  // color: #fff;
+  // position: relative;
+  // padding: 20px;
+  // box-sizing: border-box;
+  // margin: 0;
+  // padding-top: 10px;
+  width: 44px;
+    padding: 8px;
+    height: 44px;
+    border-radius: 50px;
+    position: fixed;
+    top: 25%;
+    left: 3%;
+    z-index: 99;
+    
+  a{
+    width: 44px;
+    padding: 8px;
+    height: 44px;
+    border: 1px solid white;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+   
+  }
+}
+
+.rmdb-navigation-content {
+  // max-width: 1280px;
+  // margin: 0 auto;
+  // padding: 0 20px;
+
+}
+
+.rmdb-navigation img{
+  width: 29px;
+  height: 20px;
+}
+
+.rmdb-navigation-content p {
+  font-family: 'Abel', sans-serif;
+  font-size: 22px;
+  float: left;
+  color: #fff;
+  padding-right: 10px;
+  text-decoration: none;
+  margin: 0;
+}
+
+@media screen and (max-width:500px){
+  .rmdb-navigation-content p{
+    font-size: 18px;
+  }
+  .rmdb-navigation{
+    padding: 0;
+    padding-top: 10px;
+    top: 14%;
+  }
+}
