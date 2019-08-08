@@ -67,3 +67,15 @@
 .go-home:hover{
     color: #8400ff !important;
 }
+
+@media screen and (max-width: 500px) {
+.notfound
+{
+    h1{
+        font-size: 175px;
+    }
+    h2{
+        font-size: 35px;
+    }
+} 
+}

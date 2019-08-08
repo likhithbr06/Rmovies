@@ -28,8 +28,7 @@ class Movie extends Component{
             loading:true,
             isTV : this.props.location.isTV
         })
-        console.log('tv?-',this.state.isTV)
-        console.log(this.props.match.params.showID)
+        
     //     if(this.props.location.isTv){
              const Showendpoint = `${API_URL}tv/${this.props.match.params.showID}?api_key=${API_KEY}&language=en-US`;
     //         this.showDetails(Showendpoint);
@@ -69,9 +68,6 @@ class Movie extends Component{
                     name: this.props.location.showname
                 })
             }
-            //console.log(this.state.movie)
-            //console.log('TVshows',this.state.isTV)
-           
         }
         catch(e){
             console.log('ERROR:',e)
@@ -80,8 +76,6 @@ class Movie extends Component{
 
     fetchItems= async endpoint => {
         
-        console.log(endpoint);
-        console.log(this.state.isTV);
         const {movieId} =this.props.match.params;
         try{
             const result = await (await fetch(endpoint)).json();
@@ -104,7 +98,6 @@ class Movie extends Component{
                     name: this.props.location.moviename
                 })
             }
-           // console.log(this.state.movie)
         }
         catch(e){
             console.log('ERROR!',e);
@@ -136,7 +129,7 @@ class Movie extends Component{
                     </FourColGrid>
                 </div>
                 :null}
-                {this.state.actors && this.state.loading ? <h1>No Movie Found...</h1> : null}
+                {/* {this.state.actors && this.state.loading ? <h1>No Movie Found...</h1> : null} */}
                 {this.state.loading ? <Spinner/> : null}
             </div>
         )

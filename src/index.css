@@ -2,3 +2,8 @@ body {
   margin: 0;
   background: black;
 }
+@media screen and (max-width: 500px) {
+#root{
+  overflow: hidden;
+}
+}
