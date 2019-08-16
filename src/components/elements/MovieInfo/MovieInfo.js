@@ -1,11 +1,53 @@
 import React from 'react';
-import {IMAGE_BASE_URL,POSTER_SIZE,BACKDROP_SIZE} from '../../../config';
+import {API_URL,API_KEY, IMAGE_BASE_URL,POSTER_SIZE,BACKDROP_SIZE} from '../../../config';
 import FontAwesome from 'react-fontawesome';
 import MovieThumb from '../MovieThumb/MovieThumb';
 import './MovieInfo.scss';
+import Modal from '../Modal/Modal';
+import {getVideo} from '../../movieservice';
+
 const WOW = require('wow.js')
 new WOW().init();
+
+const getVideoLink = async(video_url)=>{
+    try{
+        const vid_result = await (await getVideo(video_url));
+        var keys = vid_result;
+        return keys;
+    }
+    catch(e){
+        console.log(e);
+    }
+
+}
+let key;
 const MovieInfo=(props)=>{
+   
+    if(!props.isTV){
+        
+        let movie_vid_url=`${API_URL}movie/${props.movie.id}/videos?api_key=${API_KEY}&language=en-US`;
+        getVideoLink(movie_vid_url).then(function(res){
+            //console.log(res);
+             res.results.map((element,i)=>{
+                 if(element.type == 'Trailer')
+                 {
+                     key= element.key;
+                 }
+             })
+        })
+       // console.log(key)
+    }
+    else{
+        let tv_vid_url = `${API_URL}tv/${props.movie.id}/videos?api_key=${API_KEY}&language=en-US`;
+        getVideoLink(tv_vid_url).then(function(res){
+            res.results.map((element,i)=>{
+                if(element.type == 'Trailer')
+                {
+                    key= element.key;
+                }
+            })
+        })
+    }
     return(
         <div className="rmdb-movieinfo " 
             style={{
@@ -50,6 +92,7 @@ const MovieInfo=(props)=>{
                         </div>
                         
                         </div>
+                       <Modal video_key= {key}></Modal>
                     </div>
            </div>
         </div>

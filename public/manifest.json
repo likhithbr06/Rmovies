@@ -2,7 +2,11 @@
   "short_name": "Rmovies",
   "name": "Rmovies",
   "icons": [
-   
+    {
+      "src": "rmov.png",
+      "sizes": "144x144 64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
     {
       "src": "r_movies.png",
       "sizes": "144x144 64x64 32x32 24x24 16x16",

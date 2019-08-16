@@ -47,17 +47,20 @@ const MovieCarousel =(props)=>{
         ]
       };
 
+
         return(
           <div className="mCarousel">
             <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>{props.type === "movie" ? <h2>Popular Movies</h2> : <h2>Popular TV Shows</h2>}</ScrollAnimation>
 
             <Slider {...settings}>
               {props.movies.map((element, i) => {
+                //console.log(element)
                 if (i < 7) {
                   return (
                     <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={800}>
                     <div className="mCard" key={i}>
                       <div></div>
+                      {/* <div className="info-wrap"></div> */}
                       {props.type === "movie" ?
                         <Link to={{ pathname: `/movie/${element.id}`, isTV: false, moviename: `${props.movieName}` }} >
                           <img alt="poster" className="img-fluid" src={IMAGE_BASE_URL + POSTER_SIZE + element.poster_path}></img>
@@ -67,12 +70,22 @@ const MovieCarousel =(props)=>{
                           <img alt="poster" className="img-fluid" src={IMAGE_BASE_URL + POSTER_SIZE + element.poster_path}></img>
                         </Link>
                       }
-                      {props.type === "movie" ? <h4 className="box">{element.title}</h4> : <h4 className="box">{element.name}</h4>}
+                      {props.type === "movie" ? 
+                      <div className="box">
+                        <p>{element.title}</p>
+                        <span><span className="heart">❤️</span>{element.vote_average * 10}% </span>
+                        <p>Released on : {element.release_date}</p>
+                      </div>
+                      : 
+                      <div className="box">
+                        <p>{element.name}</p>
+                        <span><span className="heart">❤️</span>{element.vote_average * 10}% </span>
+                        <p>Aired on : {element.first_air_date}</p>
+                      </div>  }
                     </div>
                     </ScrollAnimation>
                   )
                 }
-
               })}
 
               {props.type === "movie" ?

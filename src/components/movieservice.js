@@ -29,3 +29,14 @@ export const fetchShows = async (endpoint) => {
     }
 }
 
+export const getVideo =async (endpoint) =>{
+    try{
+        const res = fetch(endpoint).then(result => {
+            return result.json();
+        })
+        return res;
+    }
+    catch(e){
+        console.log('ERROR! :',e)
+    }
+}
