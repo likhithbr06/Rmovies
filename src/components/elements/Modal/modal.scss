@@ -10,3 +10,14 @@
     color: white;
     font-family: 'Cormorant Unicase';
   }
+
+  @media (max-width:480px){
+    .trailer-btn{
+      width: 77%;
+      padding: 10px;
+      position: relative;
+      bottom: -80px;
+      right: -39px;
+      font-size: 20px;
+    }
+  }

@@ -87,16 +87,14 @@ font-family: 'Cormorant Unicase';
 
 @media screen and (max-width: 480px){
   .rmdb-banner .img-fluid{
-    height: auto;
+   // height: auto;
   }
-  .rmdb-heroimage{
-    height: auto;
-  }
-  .rmdb-heroimage-text h1{
-    font-size: 30px;
-  }
+  .rmdb-heroimage{ height: auto; }
+
+  .rmdb-heroimage-text h1{ font-size: 30px; }
+
   .rmdb-heroimage-text{
-    bottom: 0px;
+    bottom: 60px;
     min-height: 85px;
   }
   .rmdb-heroimage-text p{
@@ -104,6 +102,6 @@ font-family: 'Cormorant Unicase';
     line-height: 15px;
   }
   .rmdb-banner{
-    height: auto;
+    //height: auto;
   }
 }

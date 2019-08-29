@@ -120,7 +120,7 @@ class Home extends Component{
                 </div>  : null}
                 <div>
                     <div className="tab-content">
-                        <div id="movies" className="tab-pane  active in rmdb-home-grid">                       
+                        <div id="movies" className="tab-pane col-md-10 active in">                       
                                 <MovieCarousel movies={this.state.movies} type="movie"/>
                                 <MovieCarousel movies={this.state.Shows} type="tv"/>
                         </div>
