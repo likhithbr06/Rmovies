@@ -41,3 +41,4 @@ function scrollFunction() {
     document.getElementById("navbar").classList.remove('rmdb-header-collapse')
   }
 }
+document.getElementById("offline").style.display="none";

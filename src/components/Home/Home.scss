@@ -48,6 +48,8 @@
 }
 .tab-content{
   margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
 }
 
 @media screen and (max-width: 500px) {

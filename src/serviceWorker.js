@@ -21,7 +21,7 @@ const isLocalhost = Boolean(
 );
 
 export function register(config) {
-  if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+  if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'development' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
     if (publicUrl.origin !== window.location.origin) {
@@ -50,6 +50,18 @@ export function register(config) {
         // Is not localhost. Just register service worker
         registerValidSW(swUrl, config);
       }
+
+      //This is to check if the network is online or offline.
+      function OnlineStatus(event){
+        if(navigator.onLine){
+          document.getElementById("offline").style.display="none";
+        }
+        else{
+          document.getElementById("offline").style.display="block";
+        }
+      }
+      window.addEventListener('online',  OnlineStatus);
+      window.addEventListener('offline', OnlineStatus);
     });
   }
 }
